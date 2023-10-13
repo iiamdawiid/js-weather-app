@@ -24,8 +24,12 @@ const displayWeather = (data) => {
         const city = data.name;
         const humidity = data.main.humidity;
         const windSpeed = data.wind.speed;
+        const minTemp = data.main.temp_min;
+        const maxTemp = data.main.temp_max;
 
-        document.querySelector('.temp').textContent = `${parseInt(temp)} F`;
+        document.querySelector('.temp').textContent = `${parseInt(temp)} °F`;
+        document.querySelector('.min_temp').textContent = `${parseInt(minTemp)} °F`;
+        document.querySelector('.max_temp').textContent = `${parseInt(maxTemp)} °F`;
         document.querySelector('.city').textContent = `${city}`;
         document.querySelector('.humidity').textContent = `${humidity}%`;
         document.querySelector('.wind').textContent = `${windSpeed} mph`;
@@ -42,10 +46,13 @@ const displayWeather = (data) => {
             weatherIcon.src = './images/drizzle.png';
         } else if (data.weather[0].main == 'Mist') {
             weatherIcon.src = './images/mist.png';
+        } else {
+            weatherIcon.src = './images/snow.png';
         }
 
         const tempColor = document.querySelector('.main-div');
-
+        
+        // add more 
         if (data.main.temp > 60) {
             tempColor.style.background = 'linear-gradient(to bottom right, red, yellow';
         } else {

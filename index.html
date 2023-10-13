@@ -10,8 +10,7 @@
 <body style="background-color: #06283D">
     
     <div class="container col-4 align-self-center border border-dark main-div">
-        <h1 style="text-shadow: 5px 4px black;" class="text-center mt-3">Weather App</h1>
-        <hr class="custom-hr">
+        <h1 style="text-shadow: 5px 4px black;" class="text-center mt-3">JSWeather</h1>
 
         <form class="text-center mt-3 search" onsubmit="getWeather(event)">
             <input type="search" id="location" placeholder="Enter location...">
@@ -26,20 +25,36 @@
         <div class="weather text-center">
             <img src="./images/rain.png" class="weather-icon">
             <h1 class="temp">0 F</h1>
+
             <h2 class="city">Name Of City</h2>
+
             <div class="details">
+                <div class="col">
+                    <div>
+                        <p class="min_temp">min temp</p>
+                        <p style="color: rgb(0, 255, 234)">Low</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <p class="max_temp">max temp</p>
+                        <p style="color: rgb(255, 0, 0)">High</p>
+                    </div>
+                </div>
+            </div>
+            <div class="details2">
                 <div class="col">
                     <img src="./images/humidity.png">
                     <div>
                         <p class="humidity mt-4">50%</p>
-                        <p>Humidity</p>
+                        <p style="color: rgb(0, 255, 30);">Humidity</p>
                     </div>
                 </div>
                 <div class="col">
                     <img src="./images/wind.png">
                     <div>
                         <p class="wind mt-3">5 mph</p>
-                        <p>Wind Speed</p>
+                        <p style="color: rgb(131, 6, 169);">Wind Speed</p>
                     </div>
                 </div>
             </div>
