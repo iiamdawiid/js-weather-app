@@ -1,8 +1,7 @@
 .main-div {
-    background-image: linear-gradient(to bottom right, blue, rgb(170, 170, 243));
-    width: 700px;
+    background-image: linear-gradient(to bottom right, blue, rgb(0, 255, 17));
     color: white;
-    margin-top: 100px;
+    margin-top: 40px;
     border-radius: 20px;
     margin-bottom: 100px;
 }

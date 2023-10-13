@@ -52,11 +52,12 @@ const displayWeather = (data) => {
 
         const tempColor = document.querySelector('.main-div');
         
-        // add more 
-        if (data.main.temp > 60) {
-            tempColor.style.background = 'linear-gradient(to bottom right, red, yellow';
+        if (data.main.temp >= 70) {
+            tempColor.style.background = 'linear-gradient(to bottom right, red, yellow)'
+        } else if (data.main.temp >= 55 && data.main.temp < 70 ) {
+            tempColor.style.background = 'linear-gradient(to bottom right, blue, #ffb300)'
         } else {
-            tempColor.style.background = 'linear-gradient(to bottom right, blue, rgb(170, 170, 243))';
+            tempColor.style.background = 'linear-gradient(to bottom right, #0400ff, #00ffff)'
         }
 
         document.querySelector('.weather').style.display = 'block';
